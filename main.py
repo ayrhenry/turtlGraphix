@@ -13,63 +13,15 @@ def randColor():
 
     return r, g, b
 
-def drawTriangle():
+def draw_shape(num_sides):
     colormode(255)
     turtle.pencolor(randColor())
-    for x in range(3): 
+    for x in range(num_of_sides): 
         turtle.forward(100)
-        turtle.right(120)
-def drawSquare():
-    colormode(255)
-    turtle.pencolor(randColor())
-    for x in range(4):
-        turtle.forward(100)
-        turtle.right(90)
-def drawPentagon():
-    colormode(255)
-    turtle.pencolor(randColor())
-    for x in range(5):
-        turtle.forward(100)
-        turtle.right(72)
-def drawHexagon():
-    colormode(255)
-    turtle.pencolor(randColor())
-    for x in range(6):
-        turtle.forward(100)
-        turtle.right(60)
-def drawHeptagon():
-    colormode(255)
-    turtle.pencolor(randColor())
-    for x in range(7):
-        turtle.forward(100)
-        turtle.right(51.42)
-def drawOctagon():
-    colormode(255)
-    turtle.pencolor(randColor())
-    for x in range(8):
-        turtle.forward(100)
-        turtle.right(45)
-def drawNonagon():
-    colormode(255)
-    turtle.pencolor(randColor())
-    for x in range(9):
-        turtle.forward(100)
-        turtle.right(40)
-def drawDecagon():
-    colormode(255)
-    turtle.pencolor(randColor())
-    for x in range(10):
-        turtle.forward(100)
-        turtle.right(36)
+        turtle.right(360 / num_of_sides)
 
-drawTriangle()
-drawSquare()
-drawPentagon()
-drawHexagon()
-drawHeptagon()
-drawOctagon()
-drawNonagon()
-drawDecagon()
+for num_of_sides in range(3, 11):
+    draw_shape(num_of_sides)
 
 screen.exitonclick()
 
